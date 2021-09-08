@@ -1,10 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import Tarjeta from './components/canciones/canciones';
 
 function App() {
   return (
-    <h1>hola mundo</h1>
-  );
+    <div className="app">
+      <Tarjeta/>
+    </div> 
+     );
 }
 
 export default App;

@@ -1,6 +1,5 @@
 import React, { Component} from 'react';
-import maqueta from '../maquetatarjeta/maquetatarjeta';
-
+import Maqueta from '../maquetatarjeta/maquetatarjeta'
 
 
 class Tarjeta extends Component {
@@ -26,7 +25,11 @@ class Tarjeta extends Component {
             console.log(this.state.artistas)
 
         return(
-            <div></div>
+        <div>            
+           {this.state.artistas.map( (artistas, index) => {
+               return <Maqueta key={index} name = {artistas.name} foto = {artistas.picture}></Maqueta>
+           } )} 
+        </div>
         )
     }
 

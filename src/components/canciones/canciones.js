@@ -21,13 +21,25 @@ class Tarjeta extends Component {
         })
     }
 
+    removerArtista(name) {
+
+        const artistasFiltrados = this.state.artistas.filter(artistas => artistas.name !== name)
+        this.setState({artistas: artistasFiltrados});
+    }
+
     render() {
             console.log(this.state.artistas)
 
         return(
         <div>            
            {this.state.artistas.map( (artistas, index) => {
-               return <Maqueta key={index} link={artistas.link} name = {artistas.name} foto = {artistas.picture} type = {artistas.type} position = {artistas.position}></Maqueta>
+               return <Maqueta key={index} 
+               link={artistas.link} 
+               name = {artistas.name} 
+               foto = {artistas.picture} 
+               type = {artistas.type} 
+               position = {artistas.position} 
+               removerArtista = {(name) => this.removerArtista(name)}></Maqueta>
            } )} 
         </div>
         )

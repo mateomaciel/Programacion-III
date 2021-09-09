@@ -5,6 +5,8 @@ function App() {
   return (
     <div className="app">
       <Tarjeta/>
+      <button type="submit"> cargar mas artistas </button>
+
     </div> 
      );
 }

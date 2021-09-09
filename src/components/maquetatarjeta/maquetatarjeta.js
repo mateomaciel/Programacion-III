@@ -4,6 +4,11 @@ import '../maquetatarjeta/maquetatarjeta.css';
 export default class Maqueta extends Component {
 
 
+    eliminar(name){
+        const artistasFiltrados = this.state.artistas.filter(character => character.name !== name)
+
+    }
+
     render() {
         return (
             <div className = 'maqueta'>
@@ -12,6 +17,8 @@ export default class Maqueta extends Component {
                 <button type="submit"> ver mas </button>
                 <p>This {this.props.type} is on position {this.props.position} </p>
                 <a href={this.props.link}>conoce mas del artista</a>
+                <button onClick={() => this.props.removerArtista(this.props.name)}> eliminar artista </button>
+
             </div>
         )
     }

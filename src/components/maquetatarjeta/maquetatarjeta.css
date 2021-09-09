@@ -1,1 +1,10 @@
 * {background-color: aqua}
+
+.hide{
+ display: none;
+}
+
+.show{
+ display: block;
+
+}

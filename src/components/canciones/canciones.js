@@ -27,7 +27,7 @@ class Tarjeta extends Component {
         return(
         <div>            
            {this.state.artistas.map( (artistas, index) => {
-               return <Maqueta key={index} name = {artistas.name} foto = {artistas.picture}></Maqueta>
+               return <Maqueta key={index} link={artistas.link} name = {artistas.name} foto = {artistas.picture} type = {artistas.type} position = {artistas.position}></Maqueta>
            } )} 
         </div>
         )

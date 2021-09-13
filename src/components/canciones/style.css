@@ -1,0 +1,19 @@
+.card {
+    border-style: solid;
+    border-radius: 4px;
+    border-color: rgb(53, 9, 17);
+    background-color:rgb(161, 47, 47);
+    margin: 5px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.cards{
+    margin-top: 10px;
+  
+
+}
+
+.card img {
+    width: 100px;
+}

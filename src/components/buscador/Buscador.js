@@ -23,6 +23,7 @@ export default class Buscador extends Component {
                 <input onChange={(evento)=> this.capturaInput(evento)}type="text"/>
             </form>
             <h1>{this.state.value}</h1>
+            <input type= "submit"/>
             </div>
         )
     }

@@ -1,6 +1,7 @@
 import React, { Component} from 'react';
 import Maqueta from '../maquetatarjeta/maquetatarjeta'
 import Buscador from '../buscador/Buscador'
+import './style.css'
 
 class Tarjeta extends Component {
 
@@ -38,28 +39,44 @@ class Tarjeta extends Component {
 
     removerArtista(name) {
 
+        //console.log(name)
+
+        //permanecen en mi array "aristasFiltrados" aquellos artistas que no tengan el nombre a filtrar
         const artistasFiltrados = this.state.artistas.filter(artistas => artistas.name !== name)
-        this.setState({artistas: artistasFiltrados});
+        this.setState({
+            artistas: artistasFiltrados,
+            
+        
+        });
+        
+        //console.log(artistasFiltrados)
     }
 
     render() {
             console.log(this.state.artistas)
 
         return(
-        <div>   
-            <Buscador FiltrarPorNombre={(NombreAFiltrar)=> this.FiltrarPorNombre(NombreAFiltrar)}/>         
-           {this.state.NombreFiltrado.map( (artistas, index) => {
+        <div className="card">   
+            <Buscador FiltrarPorNombre={(NombreAFiltrar)=> this.FiltrarPorNombre(NombreAFiltrar)}/>      
+            <div className="cards">  
+           {this.state.artistas.map( (artistas, index) => {
+                
                return <Maqueta key={index} 
+              
                link={artistas.link} 
                name = {artistas.name} 
                foto = {artistas.picture} 
                type = {artistas.type} 
                position = {artistas.position} 
                removerArtista = {(name) => this.removerArtista(name)}></Maqueta>
+               
            } )} 
+        </div>
         </div>
         )
     }
+
+    
 
 }
 

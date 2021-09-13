@@ -4,10 +4,7 @@ import '../maquetatarjeta/maquetatarjeta.css';
 export default class Maqueta extends Component {
 
 
-    eliminar(name){
-        const artistasFiltrados = this.state.artistas.filter(character => character.name !== name)
-
-    };
+   
 
     constructor(props){
         super(props);

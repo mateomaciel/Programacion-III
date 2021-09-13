@@ -1,13 +1,18 @@
 import './App.css';
 import Tarjeta from './components/canciones/canciones';
 
+
+
+
+
 function App() {
   return (
-    <div className="app">
+    <div className="card">
       <Tarjeta/>
       <button type="submit"> cargar mas artistas </button>
 
     </div> 
+    
      );
 }
 

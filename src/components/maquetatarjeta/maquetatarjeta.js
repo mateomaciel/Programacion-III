@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../maquetatarjeta/maquetatarjeta.css';
 
+
+
 export default class Maqueta extends Component {
 
 

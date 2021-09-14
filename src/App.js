@@ -9,7 +9,10 @@ function App() {
   return (
     <div className="card">
       <Tarjeta/>
-      <button type="submit"> cargar mas artistas </button>
+         
+         
+      
+      
 
     </div> 
     

@@ -9,7 +9,8 @@ class Tarjeta extends Component {
         super(props);
         this.state = {
             artistas:[],
-            NombreFiltrado:[]
+            NombreFiltrado:[],
+            index: 10
         }
     }
 
@@ -21,6 +22,22 @@ class Tarjeta extends Component {
 
 
         })
+    }
+
+    addCards(){
+       fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/artists?index=${this.state.index}&limit=10`)
+       .then(response => response.json())
+       .then(data =>{
+           let arrayPrevio = this.state.artistas;
+           let arrayActualizado = arrayPrevio.concat(data.data);
+           let indexActualizado = this.state.index + 10;
+          console.log(indexActualizado)
+           this.setState({
+               artistas: arrayActualizado,
+               NombreFiltrado: arrayActualizado,
+               index: indexActualizado
+           })
+       })
     }
 
     FiltrarPorNombre(NombreAFiltrar){
@@ -57,6 +74,7 @@ class Tarjeta extends Component {
 
         return(
         <div className="card">   
+        
             <Buscador FiltrarPorNombre={(NombreAFiltrar)=> this.FiltrarPorNombre(NombreAFiltrar)}/>      
             <div className="cards">  
            {this.state.artistas.map( (artistas, index) => {
@@ -72,9 +90,13 @@ class Tarjeta extends Component {
                
            } )} 
         </div>
+
+        <button onClick={()=>this.addCards()}>Agregar mas artistas</button>
         </div>
         )
     }
+
+
 
     
 

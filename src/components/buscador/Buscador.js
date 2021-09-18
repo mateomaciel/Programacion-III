@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './styles.css';
 
 export default class Buscador extends Component {
     constructor(){
@@ -18,14 +19,15 @@ export default class Buscador extends Component {
         )
     }
     render(){
-        return(<div>
-            
-            <form onSubmit={(evento)=> this.PrevenirDefault(evento)}>
-                <input onChange={(evento)=> this.capturaInput(evento)}type="text"/>
-            </form>
-            <h1>{this.state.value}</h1>
-            
+        return(
+        <div className="Buscador-Container">
+            <div className="Buscador">
+                <h1 className="Buscador-Title">Buscá tus artistas favoritos en el top</h1>
+                <form onSubmit={(evento)=> this.PrevenirDefault(evento)}>
+                    <input onChange={(evento)=> this.capturaInput(evento)}type="text" className="Barra"/>
+                </form>
             </div>
+        </div>
         )
     }
 }

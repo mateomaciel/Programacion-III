@@ -25,6 +25,13 @@
   color: white;
 }
 
+.Principal-Container{
+  background-image: url("Fondo-Prog-3.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+
 .App-link {
   color: #61dafb;
 }

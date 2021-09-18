@@ -35,14 +35,15 @@ handleShow(){
 
     render() {
         return (
-            <div className = 'maqueta'>
-                <img src={this.props.foto} alt="" ></img>
+            <div className = 'Maqueta'>
+                <img src={this.props.foto} alt="" className="Foto-Tarjeta"></img>
                 <p>{this.props.name}</p>
-                <button type="submit" onClick={() => this.handleShow()}>{this.state.mensaje} </button>
-                <p className={this.state.clase}>This {this.props.type} is on position {this.props.position} </p>
-                <p className={this.state.clase}> <a href={this.props.link}>conoce mas del artista</a></p>
-                <p className={this.state.clase}>  <button onClick={() => this.props.removerArtista(this.props.name)}> eliminar artista </button></p>
-
+                <button type="submit" onClick={() => this.handleShow()} className="Ver-Mas">{this.state.mensaje} </button>
+                <div className={this.state.clase}>
+                <p>This {this.props.type} is on position {this.props.position} </p>
+                <p className="Link"> <a href={this.props.link}>conoce mas del artista</a></p>
+                <button onClick={() => this.props.removerArtista(this.props.name)} className="Ver-Mas" > eliminar artista </button>
+                </div>
             </div>
         );
     }

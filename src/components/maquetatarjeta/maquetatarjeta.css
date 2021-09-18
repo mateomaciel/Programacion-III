@@ -1,4 +1,4 @@
-* {background-color:rgb(49, 45, 45)}
+
 
 .hide{
  display: none;
@@ -6,5 +6,24 @@
 
 .show{
  display: block;
-
+}
+.Maqueta{
+    background-color: #1f1f20;
+    text-align: center;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: inset 0px 0px 10px 10px rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 24%);
+    border-radius: 2%;
+    color: white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.Ver-Mas{
+    background-color: #5c5960;
+    border-color: #1c1c1c;
+    color: white;
+}
+.Link{
+    color: #5298f8;
 }

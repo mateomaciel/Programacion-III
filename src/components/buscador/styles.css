@@ -1,0 +1,25 @@
+.Buscador{
+    background-color: #1C1C1C;
+    height: 400px;
+    width: 600px;
+    position: fixed;
+    text-align: center;
+    opacity: 95%;
+    box-shadow: inset 0px 0px 10px 10px rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 24%);
+}
+.Buscador-Container{
+    padding-top: 170px;
+    padding-left: 60px;
+}
+.Buscador-Title{
+    color: #519BFF;
+    margin-top: 125px;
+    margin-bottom: 35px
+
+}
+.Barra{
+    width: 350px;
+    height: 25px;
+    background-color: #5c5960;
+    border-color: #1c1c1c;
+}

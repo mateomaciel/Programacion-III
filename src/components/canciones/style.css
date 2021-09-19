@@ -18,14 +18,14 @@
 .Cards-Column{
     margin-top: 10px;
     overflow-y: scroll;
-    height: 690px;
+    height: 693px;
     text-align: -webkit-center;
     
 }
 .Cards-Sign{
     margin-top: 10px;
     overflow-y: scroll;
-    height: 690px;
+    height: 693px;
     text-align: -webkit-center;
 }
 .Sign-Container{
@@ -39,7 +39,7 @@
 .Cards-Row{
     margin-top: 10px;
     overflow-y: scroll;
-    height: 690px;
+    height: 693px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     
@@ -58,4 +58,54 @@
 }
 .Loading{
     color: #519BFF;
+}
+
+.Buscador-Boton{
+    display: grid;
+    grid-template-rows: 1fr 0.2fr;
+}
+.Boton-Container{
+    text-align: center;
+}
+.Cambiar-Orientacion{
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #1f1f1f;
+    border-color: #1c1c1c;
+    color: #519BFF;
+    font-size: medium;
+    border-radius: 3%;
+    box-shadow: inset 0px 0px 10px 10px rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 24%);
+    opacity: 80%;
+}
+.Agregar-Artistas-Container-Column{
+    margin-bottom: 25px;
+}
+.Agregar-Artistas-Container-Row{
+    height: 250px;
+    width: 200px;
+    text-align: center;
+}
+.Agregar-Artistas-Column{
+    background-color: #1f1f1f;
+    border-color: #1c1c1c;
+    color: #519BFF;
+    font-size: medium;
+    border-radius: 3%;
+    box-shadow: inset 0px 0px 10px 10px rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 24%);
+    opacity: 90%;
+    padding: 8px;}
+.Agregar-Artistas-Row{
+    background-color: #1f1f1f;
+    border-color: #1c1c1c;
+    color: #519BFF;
+    font-size: medium;
+    border-radius: 3%;
+    box-shadow: inset 0px 0px 10px 10px rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 24%);
+    opacity: 95%;
+    padding: 8px;
+    margin-top: 120px;
 }

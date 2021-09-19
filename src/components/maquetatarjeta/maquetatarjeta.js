@@ -41,7 +41,7 @@ handleShow(){
                 <button type="submit" onClick={() => this.handleShow()} className="Ver-Mas">{this.state.mensaje} </button>
                 <div className={this.state.clase}>
                 <p>This {this.props.type} is on position {this.props.position} </p>
-                <p className="Link"> <a href={this.props.link}>conoce mas del artista</a></p>
+                <p> <a className="Link" href={this.props.link}>conoce mas del artista</a></p>
                 <button onClick={() => this.props.removerArtista(this.props.name)} className="Ver-Mas" > eliminar artista </button>
                 </div>
             </div>

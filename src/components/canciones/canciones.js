@@ -11,7 +11,8 @@ class Tarjeta extends Component {
             artistas:[],
             NombreFiltrado:[],
             index: 10,
-            orientation: "Column"
+            orientation: "Column",
+            NombreAfiltrar1: ""
         }
     }
 
@@ -44,9 +45,10 @@ class Tarjeta extends Component {
     FiltrarPorNombre(NombreAFiltrar){
         const ArrayFiltrado = this.state.artistas.filter(
             milanesa=> milanesa.name.toLowerCase().includes(NombreAFiltrar.toLowerCase())
-            
         )
-    
+        this.setState({
+            NombreAfiltrar1: NombreAFiltrar
+        })
         if(NombreAFiltrar === ""){
             this.setState({NombreFiltrado: this.state.artistas})
         }
@@ -84,14 +86,12 @@ class Tarjeta extends Component {
         }   
     }
     
-    render(NombreAFiltrar) {
-            console.log(this.state.artistas)
-            console.log(this.state.NombreFiltrado)
-            if(NombreAFiltrar === "" && this.state.NombreFiltrado.length === 0){
+    render() {
+            if(this.state.NombreAfiltrar1 === "" && this.state.NombreFiltrado.length === 0){
                 return(<div className="Principal">   
                 <div className="Buscador-Boton">
                     <Buscador FiltrarPorNombre={(NombreAFiltrar)=> this.FiltrarPorNombre(NombreAFiltrar)}/>
-                    <button>Cambiar orientación</button>   
+                    <div className="Boton-Container"><button className="Cambiar-Orientacion">Cambiar orientación</button></div>   
                 </div>
                 <div className="Cards-Sign"> 
                     <div className="Sign-Container">
@@ -102,11 +102,11 @@ class Tarjeta extends Component {
                 
                 </div>)  
             }
-            else if(NombreAFiltrar !== "" && this.state.NombreFiltrado.length === 0){
+            if(this.state.NombreAFiltrar1 !== "" && this.state.NombreFiltrado.length === 0){
                  return(<div className="Principal">   
                  <div className="Buscador-Boton">
                      <Buscador FiltrarPorNombre={(NombreAFiltrar)=> this.FiltrarPorNombre(NombreAFiltrar)}/>
-                     <button>Cambiar orientación</button> 
+                     <div className="Boton-Container"><button className="Cambiar-Orientacion">Cambiar orientación</button></div> 
                  </div>
                  <div className="Cards-Sign">
                     <div className="Sign-Container">
@@ -121,7 +121,7 @@ class Tarjeta extends Component {
         <div className="Principal">   
         <div className="Buscador-Boton">
             <Buscador FiltrarPorNombre={(NombreAFiltrar)=> this.FiltrarPorNombre(NombreAFiltrar)}/>
-            <button onClick = {()=> this.changeOrientation()}>Cambiar orientación</button>   
+            <div className="Boton-Container"><button className="Cambiar-Orientacion" onClick = {()=> this.changeOrientation()}>Cambiar orientación</button></div>   
         </div>
         <div className={`Cards-${this.state.orientation}`}> 
            {this.state.NombreFiltrado.map( (artistas, index) => {
@@ -133,13 +133,12 @@ class Tarjeta extends Component {
                foto = {artistas.picture} 
                type = {artistas.type} 
                position = {artistas.position} 
-               removerArtista = {(name) => this.removerArtista(name)}
-               orientation = {this.state.orientation}>
+               removerArtista = {(name) => this.removerArtista(name)}>
                </Maqueta>
                )
                
            } )} 
-           <button onClick={()=>this.addCards()}>Agregar mas artistas</button>
+           <div className={`Agregar-Artistas-Container-${this.state.orientation}`}><button className={`Agregar-Artistas-${this.state.orientation}`} onClick={()=>this.addCards()}>Agregar mas artistas</button></div>
         </div>
         
         </div>

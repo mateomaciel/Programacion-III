@@ -20,6 +20,7 @@
     overflow-y: scroll;
     height: 693px;
     text-align: -webkit-center;
+    font-family: 'Rokkitt', serif;
     
 }
 .Cards-Sign{
@@ -35,6 +36,7 @@
     padding: 10px;
     opacity: 95%;
     box-shadow: inset 0px 0px 10px 10px rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 24%);
+    font-family: 'Rokkitt', serif;
 }
 .Cards-Row{
     margin-top: 10px;
@@ -42,6 +44,7 @@
     height: 693px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    font-family: 'Rokkitt', serif;
     
 }
 ::-webkit-scrollbar {
@@ -80,6 +83,7 @@
     border-radius: 3%;
     box-shadow: inset 0px 0px 10px 10px rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 24%);
     opacity: 80%;
+    font-family: 'Rokkitt', serif;
 }
 .Agregar-Artistas-Container-Column{
     margin-bottom: 25px;
@@ -97,7 +101,9 @@
     border-radius: 3%;
     box-shadow: inset 0px 0px 10px 10px rgb(0 0 0 / 20%), 0 5px 5px 0 rgb(0 0 0 / 24%);
     opacity: 90%;
-    padding: 8px;}
+    padding: 8px;
+    font-family: 'Rokkitt', serif;
+    }
 .Agregar-Artistas-Row{
     background-color: #1f1f1f;
     border-color: #1c1c1c;
@@ -108,4 +114,5 @@
     opacity: 95%;
     padding: 8px;
     margin-top: 120px;
+    font-family: 'Rokkitt', serif;
 }

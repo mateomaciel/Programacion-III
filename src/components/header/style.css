@@ -1,14 +1,4 @@
-:root {
-    --yellow: #12171E ;
-    --dark-blue: #03264C;
-    --light-blue: #f8f8f8;
-    --gray: #010201;
-    --light-gray: #282a2e;
-    --green: #010201;
-    --text-font-family: 'Source Sans Pro', sans-serif;
-    --title-font-family: 'Noto Sans KR', sans-serif;
-    --link-font-family: 'Inconsolata', monospace;
-  }
+
 
   .Header{
       display: grid;
@@ -18,6 +8,7 @@
       color: #519BFF;
       position: fixed;
       opacity: 80%;
+      font-family: 'Rokkitt', serif;
   }
   .Logo{text-align: left;}
   .ImgLogo{

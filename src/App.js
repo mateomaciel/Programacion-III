@@ -1,6 +1,6 @@
 import './App.css';
-import Tarjeta from './components/canciones/canciones';
-import Header from './components/header/Header'
+import Tarjeta from './components/Canciones/Canciones';
+import Header from './components/Header/Header'
 
 
 

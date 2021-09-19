@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../maquetatarjeta/maquetatarjeta.css';
+import './maquetatarjeta.css';
 
 
 

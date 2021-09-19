@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
-import Maqueta from '../maquetatarjeta/maquetatarjeta'
-import Buscador from '../buscador/Buscador'
+import Maqueta from '../Maquetatarjeta/Maquetatarjeta'
+import Buscador from '../Buscador/Buscador'
 import './style.css'
 
 class Tarjeta extends Component {
@@ -12,7 +12,8 @@ class Tarjeta extends Component {
             NombreFiltrado:[],
             index: 10,
             orientation: "Column",
-            NombreAfiltrar1: ""
+            NombreAfiltrar1: "",
+            AgregarArtistaButton: "Show"
         }
     }
 
@@ -47,7 +48,7 @@ class Tarjeta extends Component {
             milanesa=> milanesa.name.toLowerCase().includes(NombreAFiltrar.toLowerCase())
         )
         this.setState({
-            NombreAfiltrar1: NombreAFiltrar
+            NombreAfiltrar1: `${NombreAFiltrar}`
         })
         if(NombreAFiltrar === ""){
             this.setState({NombreFiltrado: this.state.artistas})
@@ -85,8 +86,20 @@ class Tarjeta extends Component {
             })
         }   
     }
-    
-    render() {
+
+    AgregarArtistaEstado(){
+        if(this.state.NombreAfiltrar1 !== "" && this.state.NombreFiltrado.length !== 0){
+            this.setState({
+             AgregarArtistaButton: "Hidden"
+             }) 
+         }
+         else{this.setState({
+             AgregarArtistaButton: "Show"
+             })
+         }   
+    }
+                
+    render() { console.log(this.state.NombreFiltrado);console.log(this.state.NombreAfiltrar1)
             if(this.state.NombreAfiltrar1 === "" && this.state.NombreFiltrado.length === 0){
                 return(<div className="Principal">   
                 <div className="Buscador-Boton">
@@ -102,7 +115,7 @@ class Tarjeta extends Component {
                 
                 </div>)  
             }
-            if(this.state.NombreAFiltrar1 !== "" && this.state.NombreFiltrado.length === 0){
+            else if(this.state.NombreAFiltrar1 !== "" && this.state.NombreFiltrado.length === 0){
                  return(<div className="Principal">   
                  <div className="Buscador-Boton">
                      <Buscador FiltrarPorNombre={(NombreAFiltrar)=> this.FiltrarPorNombre(NombreAFiltrar)}/>
@@ -116,7 +129,8 @@ class Tarjeta extends Component {
                  </div>
                  
                  </div>)
-            }else{
+            }
+            else{
                 return(
         <div className="Principal">   
         <div className="Buscador-Boton">
@@ -138,7 +152,7 @@ class Tarjeta extends Component {
                )
                
            } )} 
-           <div className={`Agregar-Artistas-Container-${this.state.orientation}`}><button className={`Agregar-Artistas-${this.state.orientation}`} onClick={()=>this.addCards()}>Agregar mas artistas</button></div>
+           <div className={`Agregar-Artistas-Container-${this.state.orientation}-${this.state.AgregarArtistaButton}`}><button className={`Agregar-Artistas-${this.state.orientation}`} onClick={()=>this.addCards()}>Agregar mas artistas</button></div>
         </div>
         
         </div>

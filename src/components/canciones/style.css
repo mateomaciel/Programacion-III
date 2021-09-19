@@ -85,13 +85,19 @@
     opacity: 80%;
     font-family: 'Rokkitt', serif;
 }
-.Agregar-Artistas-Container-Column{
+.Agregar-Artistas-Container-Column-Show{
     margin-bottom: 25px;
 }
-.Agregar-Artistas-Container-Row{
+.Agregar-Artistas-Container-Row-Show{
     height: 250px;
     width: 200px;
     text-align: center;
+}
+.Agregar-Artistas-Container-Column-Hidden{
+    display: none;
+}
+.Agregar-Artistas-Container-Row-Hidden{
+    display: none;
 }
 .Agregar-Artistas-Column{
     background-color: #1f1f1f;

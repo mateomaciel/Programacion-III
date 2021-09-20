@@ -1,5 +1,5 @@
 import './App.css';
-import Tarjeta from './components/Canciones/Canciones';
+import Tarjeta from './components/Canciones/canciones';
 import Header from './components/Header/Header'
 
 

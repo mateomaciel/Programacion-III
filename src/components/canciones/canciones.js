@@ -1,5 +1,5 @@
 import React, { Component} from 'react';
-import Maqueta from '../maquetatarjeta/maquetatarjeta'
+import Maqueta from '../Maquetatarjeta/Maquetatarjeta'
 import Buscador from '../buscador/Buscador'
 import './style.css'
 
@@ -61,7 +61,7 @@ class Tarjeta extends Component {
 
         //console.log(name)
 
-        //permanecen en mi array "aristasFiltrados" aquellos artistas que no tengan el nombre a filtrar
+      
         const artistasFiltrados = this.state.NombreFiltrado.filter(artistas => artistas.name !== name)
         this.setState({
             artistas: artistasFiltrados,

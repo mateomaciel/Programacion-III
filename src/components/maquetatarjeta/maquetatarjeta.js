@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../maquetatarjeta/maquetatarjeta.css';
+import '../Maquetatarjeta/maquetatarjeta.css';
 
 
 
@@ -18,7 +18,7 @@ export default class Maqueta extends Component {
 
 }
 
-// funcion llamada cuando se hace click en ver mas o ver menos
+
 handleShow(){
     if (this.state.clase === 'hide'){
         this.setState({

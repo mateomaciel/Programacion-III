@@ -42,9 +42,10 @@
     margin-top: 10px;
     overflow-y: scroll;
     height: 693px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     font-family: 'Rokkitt', serif;
+    align-items: flex-start;
     
 }
 ::-webkit-scrollbar {
@@ -87,11 +88,13 @@
 }
 .Agregar-Artistas-Container-Column-Show{
     margin-bottom: 25px;
+    padding-left: 30px;
 }
 .Agregar-Artistas-Container-Row-Show{
     height: 250px;
     width: 200px;
     text-align: center;
+    padding-left: 20px;
 }
 .Agregar-Artistas-Container-Column-Hidden{
     display: none;
@@ -121,4 +124,5 @@
     padding: 8px;
     margin-top: 120px;
     font-family: 'Rokkitt', serif;
+    text-align: center;
 }
